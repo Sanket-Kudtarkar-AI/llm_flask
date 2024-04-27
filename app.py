@@ -19,7 +19,7 @@ llm = Llama(model_path="openchat-3.5-1210.Q5_K_M.gguf",
             n_ctx=5000)
 
 
-@app.route('/get_llm_response')
+@app.route('/get_llm_response', methods=['POST'])
 def get_llm_response():
     request_data = request.get_json()
     prompt = request_data["prompt"]
