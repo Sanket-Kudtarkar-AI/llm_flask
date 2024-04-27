@@ -27,7 +27,7 @@ def get_llm_response():
     prompt_ = f'''GPT4 Correct User: {prompt}<|end_of_turn|>GPT4 Correct Assistant:'''
 
     output = llm(prompt_,
-                 max_tokens=5,
+                 max_tokens=2000,
                  echo=True,
                  temperature=0.0,
                  )
